@@ -1,17 +1,3 @@
-## I need to make the library path accessible, so I can load packages.. 
-## I cant install anything new if I dont do this. 
-### clicking Tools then Install packages shows which library paths are available. 
-#### The C drive is only accessible when running Rstudio as Administrator
-## You might not need to do this. My laptop doesnt like installing packages
-
-myPaths <- .libPaths()   # get the paths
-myPaths
-myPaths <- c(myPaths[2], myPaths[1])  # switch them
-.libPaths(myPaths)  # reassign them
-
-
-
-
 ### Loading the series matrix files to see whats there. this code is from Geo2R. 
 ## It puts the data into an ExpressionSet object which can be easily subsetted to look inside
 library(GEOquery)
